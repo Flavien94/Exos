@@ -1,10 +1,84 @@
 *{
   margin: 0 auto;
 }
+body{
+  font-family: sans-serif;
+}
 .bg{
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url('../img/bg2.jpg');
-  height: 599px;
+  height: 609px;
   background-position: 0;
+  color: white;
+}
+.container{
+  color: #5C6972;
+height: 50px;
+}
+.logo{
+  display: inline-flex;
+    margin: 1% 0 0 5%;
+  }
+.accueil{
+  margin: 5px 0 0 8px;
+}
+.app{
+  margin: 5px 0 0 35px;
+}
+.lang{
+  float: right;
+margin: 17px 8% 0 0;
+}
+.texte{
+  text-align: center;
+  float: left;
+  margin: 5% 0 0 20%;
+}
+.title{
+font-size: 45px;
+  }
+.texte-child{
+  margin: 0;
+  font-size: 20px;
+    text-align: initial;
+    max-width: 468px;
+}
+.Connexion{
+  background: white;
+border-radius: 5px;
+     text-align: justify;
+      float: right;
+      margin: 0 10% 0 20%;
+}
+input:not(#remember){
+  padding: 9px;
+margin: 10px;
+border-radius: 5px;
+font-size: 15px;
+}
+.mail{
+width: 70%;
+}
+#remember{
+  margin: 10px;
+}
+.remember{
+    color: #5C6972;
+}
+.pass{
+}
+.mdp {
+  color: #4A95CF;
+}
+.mdp:hover{
+  text-decoration: underline;
+}
+.bouton{
+  color: white;
+  border: 1px solid #3B88C3;
+  background: #4A95CF;
+}
+.padding{
+  padding: 5px;
 }
