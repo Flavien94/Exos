@@ -1,0 +1,10 @@
+*{
+  margin: 0 auto;
+}
+.bg{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../img/bg2.jpg');
+  height: 599px;
+  background-position: 0;
+}
