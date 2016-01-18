@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="generateur.css">
+    <script>
+    aleatoire=Math.floor(Math.random()*5)
+    switch(aleatoire){
+    case 0:document.write("<p>T'as cru que c'étais la fête Flavien?</p>");break;
+    case 1:document.write("<p>Et mais t'as cru que je rigolais avec toi Flavien?</p>");break;
+    case 2:document.write("<p>Miroir, miroir, quelle coupe vais-je avoir???</p>");break;
+
+    }
+    </script>
+    <script type="text/javascript" src="../trombi/paper-full.js"></script>
+    <script type="text/paperscript" canvas="canvas">
+
+    // source de la base personnalisée
+    //http://paperjs.org/examples/radial-rainbows/
+
+
+    // critères couleurs, saturation, cycle, lumières
+    var point = view.center;
+
+    var colors = [];
+    var cycles = 4;
+    for (var i = 0, l = 5; i < l; i++) {
+    	var brightness = 0.6 - (i / l) * 0.8;
+    	var hue = i / l * cycles * 2;
+    	var color = {
+    		hue: hue,
+    		saturation: 0.8,
+    		brightness: brightness
+    	};
+    	colors.push(color);
+    }
+
+    var radius = Math.max(view.size.width, view.size.height) * 0.5;
+
+    var path = new Path.Rectangle({
+    	rectangle: view.bounds,
+    	fillColor: {
+    		origin: point,
+    		destination: point + [radius, 0.2],
+    		gradient: {
+    			stops: colors,
+    			radial: true
+    		}
+    	}
+    });
+
+    // effet en fonction de la position et de l'interaction de la souris
+    var color = path.fillColor;
+    var gradient = color.gradient;
+    var mouseDown = false;
+    var mousePoint = view.center;
+
+    function onMouseDown(event) {
+    	mouseDown = true;
+    	mousePoint = event.point;
+    }
+
+    function onMouseDrag(event) {
+    	mousePoint = event.point;
+    }
+
+    function onMouseUp(event) {
+    	vector.length = 35;
+    	mouseDown = false;
+    }
+
+    var grow = false;
+    var vector = new Point(150, 0);
+
+    function onFrame() {
+    	for (var i = 0, l = gradient.stops.length; i < l; i++)
+    		gradient.stops[i].color.hue -= 20;
+    	if (grow && vector.length > 300) {
+    		grow = false;
+    	} else if (!grow && vector.length < 75) {
+    		grow = true;
+    	}
+    	if (mouseDown) {
+    		point = point + (mousePoint - point) / 10;
+    	} else {
+    		vector.length += (grow ? 1 : -8);
+    		vector.angle += 16;
+    	}
+    	color.highlight = mouseDown ? point : point + vector;
+    }
+
+    function onResize(event) {
+    	point = view.center;
+    	path.bounds = view.bounds;
+    	var color = path.fillColor;
+    	color.origin = point;
+    	var radius = Math.max(view.size.width, view.size.height) * 0.75;
+    	color.destination = point + [radius, 0];
+    }var point = view.center;
+
+    var colors = [];
+    var cycles = 4;
+    for (var i = 0, l = 5; i < l; i++) {
+    	var brightness = 0.6 - (i / l) * 0.8;
+    	var hue = i / l * cycles * 2;
+    	var color = {
+    		hue: hue,
+    		saturation: 0.8,
+    		brightness: brightness
+    	};
+    	colors.push(color);
+    }
+
+    // critères couleurs, saturation, cycle, lumières
+
+    var radius = Math.max(view.size.width, view.size.height) * 0.5;
+
+    var path = new Path.Rectangle({
+    	rectangle: view.bounds,
+    	fillColor: {
+    		origin: point,
+    		destination: point + [radius, 0.2],
+    		gradient: {
+    			stops: colors,
+    			radial: true
+    		}
+    	}
+    });
+
+    var color = path.fillColor;
+    var gradient = color.gradient;
+    var mouseDown = false;
+    var mousePoint = view.center;
+
+    function onMouseDown(event) {
+    	mouseDown = true;
+    	mousePoint = event.point;
+    }
+
+    function onMouseDrag(event) {
+    	mousePoint = event.point;
+    }
+
+    function onMouseUp(event) {
+    	vector.length = 35;
+    	mouseDown = false;
+    }
+
+    var grow = false;
+    var vector = new Point(150, 0);
+
+    function onFrame() {
+    	for (var i = 0, l = gradient.stops.length; i < l; i++)
+    		gradient.stops[i].color.hue -= 20;
+    	if (grow && vector.length > 300) {
+    		grow = false;
+    	} else if (!grow && vector.length < 75) {
+    		grow = true;
+    	}
+    	if (mouseDown) {
+    		point = point + (mousePoint - point) / 10;
+    	} else {
+    		vector.length += (grow ? 1 : -8);
+    		vector.angle += 16;
+    	}
+    	color.highlight = mouseDown ? point : point + vector;
+    }
+
+    function onResize(event) {
+    	point = view.center;
+    	path.bounds = view.bounds;
+    	var color = path.fillColor;
+    	color.origin = point;
+    	var radius = Math.max(view.size.width, view.size.height) * 0.75;
+    	color.destination = point + [radius, 0];
+    }
+
+    </script>
+  </head>
+
+  <body>
+
+        <canvas id="canvas" ></canvas>
+
+<div class="buton">
+  <input type="button" onclick='window.location.reload(false)' value="Rafraichir"/>
+
+  </body>
+</html>

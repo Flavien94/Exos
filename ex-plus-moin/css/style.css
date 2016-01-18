@@ -1,0 +1,83 @@
+  * {
+    margin: 0 auto;
+  }
+  #guess {
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid #70134C;
+    background: transparent;
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    margin: 25px 0 0 520px;
+  }
+  ::-webkit-input-placeholder {
+    color: #70134C;
+  }
+  .fond {
+    background: url(../img/logo2.jpg) no-repeat center fixed;
+    background-size: cover;
+    background-position: 0 -73;
+    height: 659px;
+  }
+  .reponse {
+    color: #70134C;
+    font-size: 165px;
+    position: absolute;
+    margin: 80px 0 0 840px;
+  }
+  .reponse2 {
+    position: absolute;
+    margin: 235px 0 0 -320px;
+    background: violet;
+    width: 200px;
+    height: 30px;
+    border: 1px solid violet;
+  }
+  .win {
+    color: #70134C;
+    font-size: 225px;
+    position: absolute;
+    margin: -50px 0 0 -754px;
+    width: 1163px;
+  }
+  #cercle {
+    background-color: black;
+    /*On ajoute un fond noir*/
+    height: 500px;
+    /* 500 pixel de hauteur*/
+    width: 500px;
+    /* 500 pixel de largeur*/
+    margin: auto;
+    /*centrer le cercle au milieux */
+    border-radius: 500px;
+    /* On arrondit notre div */
+    border: 10px solid grey;
+    /* On ajoute une bordure de 10 pixel grise */
+  }
+  #panneau
+  {
+  background-color:grey;  /* Fond gris */
+  height:135px;
+  width:350px;
+
+  /* Centrer horizontalement */
+  margin-left:auto;
+  margin-right:auto;
+
+  /*Centrer verticalement*/
+  margin-top:182.5px;
+
+  /*Arondit les angles*/
+  border-radius:5px;
+
+  /*Ajoute la police que nous avions intégrer*/
+  font-family:Chrono;
+
+  /*Définit la couleur et la taille du texte */
+  color:white;
+  font-size:100px;
+
+  /*Aligne le texte au centre*/
+  text-align:center;
+  }

@@ -1,0 +1,30 @@
+* {
+  width: 700;
+  margin: auto;
+}
+.blocks {
+  margin-top: 50px;
+}
+.block{
+  height: 100px;
+  width: 300px;
+  background: #111198;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in;
+}
+.block:hover{
+  border: 5px solid #ccaa33;
+  box-sizing: border-box;
+}
+.yellow{
+  background: #ccaa33;
+}
+.yellow:hover{
+  border: 5px solid #111198;
+  box-sizing: border-box;
+}
+ .blue{
+   background: #111198;
+
+ }

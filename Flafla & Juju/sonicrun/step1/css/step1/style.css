@@ -1,0 +1,28 @@
+.bg-cont {
+     position: relative;
+     overflow: hidden;
+     background: url("../../img/step1/bg.png");
+   }
+
+.sonic {
+    background: url('../../img/step1/sonic-run-xs.png') no-repeat;
+    position:absolute;
+}
+
+.sonic {
+  margin-left: 50%;
+    z-index: 1000;
+    top:125px;
+    width: 65px;
+    height: 70px;
+
+    animation: run 500ms infinite steps(9);
+}
+
+
+@keyframes run {
+
+    from { background-position: 0 0; }
+    to { background-position: -585px 0; }
+
+}

@@ -1,0 +1,29 @@
+*{
+  box-sizing: border-box;
+}
+.container{
+  display: inline-flex;
+}
+div:not(.container){
+  display: flex;
+}
+.col12{
+  background: purple;
+  height: 50px;
+  width: 30px;
+}
+.col4{
+  background: red;
+  height: 50px;
+  width: 30px;
+}
+.col8{
+  background: green;
+  height: 50px;
+  width: 30px;
+}
+.col6{
+  background: orange;
+  height: 50px;
+  width: 30px;
+}

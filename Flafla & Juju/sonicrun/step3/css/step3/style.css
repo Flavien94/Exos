@@ -1,0 +1,121 @@
+.bg-cont{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.sclouds, .mclouds, .bclouds, .ocean, .sea, .sonic, .floor, .bush {
+  background: url('../../img/step3/spriteSonicfullf.png');
+  position: absolute;
+}
+
+.sclouds, .mclouds, .bclouds, .ocean, .sea, .floor, .bush {
+  width: 100%;
+  z-index: 1;
+}
+
+.sonic {
+  z-index: 500;
+  left: 460px;
+  top:125px;
+  width: 65px;
+  height: 70px;
+  animation: runx 1s infinite steps(9),runy 5s infinite steps(5),jump 5s infinite;
+}
+
+
+@keyframes runx {
+  from { background-position-x: 0; }
+    to { background-position-x: -585px; }
+}
+@keyframes runy {
+    from { background-position-y: 0; }
+    to { background-position-y:-350px; }
+}
+
+@keyframes jump {
+  85% { top: 125px; }
+  85.1%{top: 110px   }
+  85.2%{top: 100px   }
+  85.3%{top: 90px   }
+  85.4%{top: 100px   }
+  85.5%{top: 110px   }
+    100%{top: 125px   }
+}
+
+.floor {
+  height:113px;
+  top:191px;
+  background-position: 0 275px;
+  animation: floor 3s infinite linear;
+}
+
+@keyframes floor {
+    from { background-position: 0 275px; }
+    to { background-position: -585px 275px; }
+}
+
+.bush {
+  height:162px;
+  top:33px;
+  background-position: 0 158px;
+  animation: bush 3s infinite linear,
+}
+@keyframes bush {
+    from { background-position: 0 158px; }
+    to { background-position: -585px 158px; }
+}
+.sea {
+  height:117px;
+  top:142px;
+  background-position: 0 -525px;
+  animation: sea 40s infinite linear,
+}
+@keyframes sea {
+    from { background-position: 0 -525px; }
+    to { background-position: -585px -525px; }
+}
+
+.ocean {
+  height:74px;
+  top:69px;
+  background-position: 0 -455px;
+  animation: ocean 40s infinite linear,
+}
+@keyframes ocean {
+    from { background-position: 0 -455px; }
+    to { background-position: -585px -455px; }
+}
+
+.bclouds {
+  height:58px;
+  top:11px;
+  background-position: 0 -395px;
+  animation: bclouds 40s infinite linear,
+}
+@keyframes bclouds {
+    from { background-position: 0 -395px; }
+    to { background-position: -585px -395px; }
+}
+
+.mclouds {
+  height:25px;
+  top:-14px;
+  background-position: 0 -370px;
+  animation: mclouds 60s infinite linear,
+}
+@keyframes mclouds {
+    from { background-position: 0 -370px; }
+    to { background-position: -585px -370px; }
+}
+
+.sclouds {
+  height:19px;
+  top:-33px;
+  background-position: 0 -350px;
+  animation: sclouds 25s infinite linear,
+}
+@keyframes sclouds {
+    from { background-position: 0 -350px; }
+    to { background-position: -585px -350px; }
+}
