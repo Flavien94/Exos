@@ -1,0 +1,62 @@
+body{
+  background-color: grey;
+}
+.top{
+  height: 30px;
+  border: 1px solid white;
+}
+.m{
+  background: orange;
+  border: 1px solid black;
+  height: 10px;
+}
+.top2{
+  height: 30px;
+}
+.left2,.mid,.right2{
+  height: 599px ;
+}
+.left2{
+}
+.mid{
+}
+.right2{
+}
+.bot{
+  height: 30px;
+}
+.top-child{
+  height: 95px;
+}
+
+.mid-child{
+  border: 1px solid white;
+  height: 410px;
+}
+
+.bot-child{
+  height: 95px;
+}
+.carousel{
+  border: 1px solid cyan;
+  height: 200px;
+}
+.bg{
+  height: 104px;
+  background: blue;
+
+}
+.bg2{
+  background: white;
+  height: 104px;
+
+}
+.bg3{
+  background: white;
+  height: 208px;
+
+}
+.left-child{
+  height: 408px;
+  background: white;
+}
