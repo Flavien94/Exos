@@ -1,0 +1,52 @@
+body {
+  background-color: #F5F5F5;
+  margin: auto;
+  text-align: center;
+}
+h1 {
+  font-size: 100px;
+  color: #EAD7D7;
+  font-family: sans-serif;
+  font-weight: 100;
+  margin-bottom: 30px;
+}
+#input, .reponse,.irep {
+  padding: 15px 140px 15px 40px;
+  font-size: 25px;
+  color: grey;
+}
+.container {
+  max-width: 0;
+  margin-left: 401px;
+}
+.toggle {
+  position: absolute;
+  margin: 2% 0 0 1%;
+}
+.hidden {
+  display: none;
+}
+.hidde {
+  display: none;
+}
+.rayer{
+  text-decoration: line-through;
+}
+.destroy{
+  position: absolute;
+  background: transparent;
+  transition: color 0.2s ease-out;
+  color: #cc9a9a;
+  border: none;
+  font-size: 20px;
+  margin: -44px 0 0 464px;
+}
+.destroy::after{
+  content: 'x';
+}
+.destroy:hover{
+  color: #af5b5e;
+}
+.destroy:focus{
+outline: none;
+}
