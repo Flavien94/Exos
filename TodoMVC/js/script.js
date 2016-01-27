@@ -28,22 +28,22 @@ $(document).ready(function() {
       $(this).find(".reponse").removeClass("rayer");
     }
   });
-  $("body").on("click", ".tog", function test() {
-    if ($('input[name=tog]').is(':checked')) {
-      $('input[name=toggle]').prop('checked', true);
-      $(".reponse").addClass("rayer");
-      $(".container").append('<div class="supr">SUPRIMER</div>');
-      $(".supr").on("click", function() {
-        $(".item").remove();
-        $(".supr").remove();
-      });
-    } else {
-      $('input[name=toggle]').prop('checked', false);
-      $(".reponse").removeClass("rayer");
-      $(".supr").remove();
-
-    }
-  });
+  // $("body").on("click", ".tog", function test() {
+  //   if ($('input[name=tog]').is(':checked')) {
+  //     $('input[name=toggle]').prop('checked', true);
+  //     $(".reponse").addClass("rayer");
+  //     $(".container").append('<div class="supr">SUPRIMER</div>');
+  //     $(".supr").on("click", function() {
+  //       $(".item").remove();
+  //       $(".supr").remove();
+  //     });
+  //   } else {
+  //     $('input[name=toggle]').prop('checked', false);
+  //     $(".reponse").removeClass("rayer");
+  //     $(".supr").remove();
+  //
+  //   }
+  // });
 
   $('.container').on("click", '.destroy', function() {
     $(this).parent().remove();
