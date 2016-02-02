@@ -58,3 +58,21 @@ h1 {
 .destroy:focus{
 outline: none;
 }
+.white{
+  border-radius: 3px;
+  background: white;
+  height: 45px;
+}
+.supr{
+  position: absolute;
+left: 75%;
+top: 105%;
+color: #A4A7A7;
+}
+.n
+{
+  position: absolute;
+left: 3%;
+top: 105%;
+color: #A4A7A7;
+}
