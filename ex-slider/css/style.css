@@ -1,0 +1,19 @@
+*{
+  margin: 0 auto;
+}
+.container{
+  background: cyan;
+  height: 100vh;
+}
+.slider{
+  background: red;
+      height: 100vh;
+      float: left;
+      width: 15%;
+}
+.animation{
+float: right;
+}
+.right{
+  position: a
+}

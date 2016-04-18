@@ -1,0 +1,177 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+.no_margin {
+  margin: 0 auto !important;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  color: black;
+  overflow-x: hidden;
+}
+.header {
+  width: 100%;
+  height: 20vh;
+}
+.menu {
+  width: 100%;
+  height: 15vh;
+  margin: 0 auto;
+  text-align: center;
+}
+.boutons {
+  padding-top: 1%;
+  text-align: center;
+}
+.btn > a {
+  color: black;
+  font-size: 15px;
+}
+.input {
+  padding-left: 3%;
+  color: black;
+  height: 36px;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+.signin{
+  margin-right: 25px;
+}
+.signup{
+  margin-right: 85px;
+}
+.signup, .signin {
+  background: cadetblue;
+}
+.login{
+  display: flex;
+  margin-top: -2%;
+  float: right;
+}
+.dropbtn {
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: cadetblue;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  margin-left: -13px;
+  margin-top: 2px;
+  border-radius: 5px;
+  z-index: 20;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #f1f1f1
+}
+.show {
+  display: block;
+}
+.block{
+  background: white;
+  height: 40vh;
+  border: 1px solid black;
+  border-radius: 1px;
+}
+.bg_title{
+  margin-top: -9%;
+  margin-left: 10%;
+  max-width: 120px;
+  background: white;
+  text-align: center;
+}
+.liste{
+  max-width: 358px;
+  padding: 20px;
+  margin-top: -15px;
+  line-height: 60px;
+}
+.liste >ul>li> a{
+  text-decoration: none;
+  color: black;
+}
+.liste >ul>li{
+  list-style: none;
+}
+.bouton{
+  margin: -5% 0 0 45%;
+  background: white;
+  text-align: center;
+  max-width: 175px;
+  height: 5vh;
+box-shadow: 0px 0px 0px 2px black;
+}
+.bouton:hover{
+  border: 1px solid black;
+}
+.bouton > a{
+  position: absolute;
+  color: black;
+  text-decoration: none;
+  margin: -15px 0 0 -79px;
+}
+.pub{
+  text-align: center;
+}
+.block-pub{
+  height: 50vh;
+  background: grey;
+}
+.slider{
+  background: black;
+height: 35vh;
+margin-top: 115px;
+}
+
+.filtre{
+  margin: -30px 0 0 0;
+  height: 12vh;
+}
+.filtre >form> select{
+  padding: 3px;
+  margin: 25px;
+}
+.filtre >form>input{
+  padding: 3px;
+}
+.filtre>form{
+  width: 1200px;
+}
+.bouton_emplois{
+  margin: -55px 0 0 80%;
+background: white;
+text-align: center;
+max-width: 175px;
+height: 5vh;
+box-shadow: 0px 0px 0px 2px black;
+}
+.bouton_emplois:hover{
+  border: 1px solid black;
+}
+.bouton_emplois> a{
+  position: absolute;
+color: black;
+text-decoration: none;
+margin: 5px 0 0 -77px;
+}
+.offres{
+  width: 900px;
+left: 13%;
+}
+.offre{
+  border: 1px solid black;
+  height: 15vh;
+  margin-bottom: 2%;
+}
