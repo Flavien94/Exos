@@ -6,6 +6,7 @@ $(document).ready(function() {
 
     var vale = $("#input").val();
     if (e.which == 13 && vale != "") {
+<<<<<<< Updated upstream
       $(".container").append("<div class='item'><input class='toggle check' name='toggle' type='checkbox'></input><button name='destroy' class='destroy'></button><div class='child'><input class='reponse' type='text' name='name' value='" + vale + "' disabled></input></div></div>");
       $("#input").val("");
       $(".n").removeClass("hidden");
@@ -16,6 +17,11 @@ $(document).ready(function() {
       $(".n").html(+n + " items left");
     } else if (e.which == 13 && n === 1) {
       $(".n").html(+n + " item left");
+=======
+      $(".container").append("<div class='item'><input class='toggle' name='toggle' type='checkbox'></input><button name='destroy' class='destroy'></button><div class='child'><input class='reponse' type='text' name='name' value='" + vale + "' disabled></input></div></div>");
+      $("#input").val("");
+      console.log(vale);
+>>>>>>> Stashed changes
     }
 
 
@@ -41,6 +47,7 @@ $(document).ready(function() {
   //fonction qui coche et decoche ma checkbox, raye et deraye son input et crée
   // un message de supression qui se suprome si aucune est coché
   $(".container").on("click", ".item", function() {
+<<<<<<< Updated upstream
     if ($(this).find(".toggle").is(':checked')) {
       $(this).find(".reponse").addClass("rayer");
       $(".container").append("<div class='supr'>Clear completed</div>");
@@ -49,6 +56,20 @@ $(document).ready(function() {
     } else {
       $(this).find(".reponse").removeClass("rayer");
       $('input[name=tog]').prop('checked', false);
+=======
+    if ($('input[name=toggle]').is(':checked')) {
+      var it = (this);
+      console.log(it);
+      $(this).find(".reponse").addClass("rayer");
+      $(".container").prepend('<div class="supr">SUPRIMER</div>');
+      $("body").on("click", ".supr", function() {
+        $(it).remove();
+        $(".supr").remove();
+      });
+    } else {
+      $(this).find(".reponse").removeClass("rayer");
+      $(".supr").remove();
+>>>>>>> Stashed changes
     }
   });
 
@@ -73,8 +94,13 @@ $(document).ready(function() {
   $("body").on("click", ".tog", function test() {
     if ($('input[name=tog]').is(':checked')) {
       $('input[name=toggle]').prop('checked', true);
+<<<<<<< Updated upstream
       $(this).find(".reponse").addClass("rayer");
       $(".container").append("<div class='supr'>Clear completed</div>");
+=======
+      $(".reponse").addClass("rayer");
+
+>>>>>>> Stashed changes
     } else {
       $('input[name=toggle]').prop('checked', false);
       $(this).find(".reponse").removeClass("rayer");
