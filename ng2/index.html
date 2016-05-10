@@ -1,0 +1,20 @@
+<!doctype html>
+<html ng-app="jsonApp">
+  <head>
+    <meta charset="utf-8">
+    <title>BONJOUR</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  </head>
+  <body>
+    <div ng-controller="jsonController">
+      <table>
+        <tr ng-repeat="people in person">
+          <td>{{people.surname}}</td>
+        </tr>
+      </table>
+    </div>
+
+
+    <script src="app.js"></script>
+  </body>
+</html>

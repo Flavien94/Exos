@@ -1,0 +1,2 @@
+INSERT INTO profil VALUES
+('0','Ryadh','Développeur Web Junior à SIMPLonMARS.','pp.jpg'),('1','Flavien','Développeur Web Junior à SIMPLonMARS.','pp.jpg'),('2','Kévin','Développeur Web Junior à SIMPLonMARS.','kevin.jpg'),('3','Abdel-Malik','Développeur Web Junior à SIMPLonMARS.','pp.jpg'),('4','Juliette','Développeur Web Junior à SIMPLonMARS.','juliette.jpg'),('5','Jousna','Développeur Web Junior à SIMPLonMARS.','pp.jpg');

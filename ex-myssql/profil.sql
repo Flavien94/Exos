@@ -1,0 +1,6 @@
+CREATE TABLE profil(
+id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+ nom VARCHAR(255),
+ description TEXT,
+ image VARCHAR(255)
+);

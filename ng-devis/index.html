@@ -1,0 +1,33 @@
+<!doctype html>
+<html ng-app="Devis">
+<head>
+  <title>Devis</title>
+  <meta charset="UTF-8">
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+</head>
+<body>
+ <div ng-controller="DevisController">
+<h1>{{title}}</h1>
+<hr>
+<form ng-submit="calcul()">
+   <table>
+     <tr>
+       <th>Quantité</th>
+       <th>Prix Unitaire</th>
+     </tr>
+     <tr ng-repeat="objet in cart">
+       <td>
+          <label>{{objet.name}}</label>
+         <input ng-model="objet.q" ng-value="objet.price" type="number" name="name"></td>
+       <td><input ng-model="objet.q" ng-value="objet.price" type="number" name="name">
+        <button ng-click="delete">X</button>
+       </td>
+       <h3>Price = {{objet.q}}</h3>
+     </tr>
+   </table>
+ </form>
+ </div>
+ <script src="app.js"></script>
+</body>
+
+</html>

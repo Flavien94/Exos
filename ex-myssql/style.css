@@ -1,0 +1,81 @@
+body {
+  text-align: center;
+}
+.nav {
+  text-align: center;
+  width: 736px;
+  margin: auto;
+  float: none;
+  font-size: 20px;
+}
+.navbar-brand {
+  font-size: 30px;
+}
+.navbar {
+  top: 0;
+  border-width: 0 0 1px;
+}
+h1 {
+  padding-top: 55px;
+  text-align: center;
+}
+.desc {}
+img {
+  height: 100px;
+}
+h2, p {
+  text-align: center;
+}
+.sidebar {
+  padding-top: 70px;
+  overflow: auto;
+  height: 90vh;
+}
+.panel {
+  background: #f8f8f8;
+  box-shadow: none;
+  border: none;
+  margin: 0 auto;
+  margin-top: 609px;
+  width: 111%;
+  margin-left: -6%;
+  color: #777;
+}
+.photo {
+  margin-left: -83%;
+  margin-top: -41%;
+  height: 45px;
+}
+h4 {
+  position: absolute;
+  margin-left: 23%;
+  font-weight: 700;
+  margin-top: 2%;
+}
+h6 {
+  position: absolute;
+  margin-left: 42%;
+  margin-top: 2.5%;
+}
+.tweet {
+  position: absolute;
+  margin-top: 7%;
+  margin-left: 20%;
+}
+ul {
+  display: inline-block;
+}
+.profil {
+  margin-top: -45%;
+}
+.sonic {
+  position: absolute;
+  z-index: 0;
+  top: -15px;
+  width: 65px;
+  height: 70px;
+  animation: run 0.6s infinite steps(9), move 3s infinite linear;
+  background: url('spriteSonicfull.png');
+}
+@keyframes move {from {left: -10px;}to {left: 1380px;}}
+@keyframes run {from {background-position: 0 0;}to {background-position: -585px 0;}}

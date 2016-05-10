@@ -1,0 +1,51 @@
+<!doctype html>
+<html ng-app="jsonApp">
+
+<head>
+    <title>BONJOUR</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <style media="screen">
+        .sortorder:after {
+            content: '\25b2';
+        }
+
+        .sortorder.reverse:after {
+            content: '\25bc';
+        }
+    </style>
+</head>
+
+<body>
+    <div ng-controller="jsonController">
+        <input type="text" ng-model="searchPerson" placeholder="Chercher dans la liste" autofocus>
+        <table style="text-align:center">
+            <tr>
+                <th><a ng-click="order('id')">id</a></th>
+                <span class="sortorder" ng-show="predicate === 'id'" ng-class="{reverse:reverse}"></span>
+                <th><a ng-click="order('firstname')">Prenom</a></th>
+                <span class="sortorder" ng-show="predicate === 'firstname'" ng-class="{reverse:reverse}"></span>
+                <th><a ng-click="order('surname')">Nom</a></th>
+                <span class="sortorder" ng-show="predicate === 'surname'" ng-class="{reverse:reverse}"></span>
+                <th><a ng-click="order('gender')">Sexe</a></th>
+                <span class="sortorder" ng-show="predicate === 'gender'" ng-class="{reverse:reverse}"></span>
+                <th><a ng-click="order('birthday')">Anniverssaire</a></th>
+                <span class="sortorder" ng-show="predicate === 'birthday'" ng-class="{reverse:reverse}"></span>
+                <th><a ng-click="order('height')">Taille</a></th>
+                <span class="sortorder" ng-show="predicate === 'height'" ng-class="{reverse:reverse}"></span>
+            </tr>
+            <tr ng-repeat="people in person | filter:searchPerson | orderBy:predicate:reverse">
+                <td>{{people.id}}</td>
+                <td>{{people.firstname}}</td>
+                <td>{{people.surname}}</td>
+                <td>{{people.gender}}</td>
+                <td>{{people.birthday}}</td>
+                <td>{{people.height}}</td>
+
+            </tr>
+        </table>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

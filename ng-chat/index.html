@@ -1,0 +1,119 @@
+<!doctype html>
+<html ng-app="Chat">
+
+<head>
+    <title>Chat</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div ng-controller="Name1Controller" class="col-md-4">
+                <div id="login1">
+                    <h2>What's your Name ?</h2>
+                    <form class="form_name" ng-submit="sendName();">
+                        <input class="input_name" type="text" ng-model="newName" placeholder="Votre nom">
+                    </form>
+                    <h4 id="erreur1"><li ng-repeat="erreur in listError1">{{erreur}}</li></h4>
+                </div>
+                <div id="chat1" class="row">
+                    <div class="head col-md-12">
+                        <h2 id="name_t1" class="name"></h2>
+                        <div id="wall1" class=" col-md-12 wall">
+                            <div class=" col-md-6 global">
+                                <h3>Chat Global</h3>
+                                <ul>
+                                    <li ng-repeat="chat in listMsg track by $index">{{chat}}</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 private">
+                                <h3>Chat Privé</h3>
+                                <ul>
+                                    <li ng-repeat="private in listPrivate1 track by $index">{{private}}</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-12 msg">
+                                <form ng-submit="sendMessage();">
+                                    <input class="input_msg" type="text" ng-model="newMessage" placeholder="Votre message">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div ng-controller="Name2Controller" class="col-md-4">
+                <div id="login2">
+                    <h2>What's your Name ?</h2>
+                    <form class="form_name" ng-submit="sendName();">
+                        <input class="input_name" type="text" ng-model="newName" placeholder="Votre nom">
+                    </form>
+                    <h4 id="erreur2"><li ng-repeat="erreur in listError2">{{erreur}}</li></h4>
+                </div>
+                <div id="chat2" class="row">
+                    <div class="head col-md-12">
+                        <h2 id="name_t2" class="name"></h2>
+                        <div id="wall2" class=" col-md-12 wall">
+                            <div class=" col-md-6 global">
+                                <h3>Chat Global</h3>
+                                <ul>
+                                    <li ng-repeat="chat in listMsg track by $index">{{chat}}</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 private">
+                                <h3>Chat Privé</h3>
+                                <ul>
+                                    <li ng-repeat="private in listPrivate2 track by $index">{{private}}</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-12 msg">
+                                <form ng-submit="sendMessage();">
+                                    <input class="input_msg" type="text" ng-model="newMessage" placeholder="Votre message">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div ng-controller="Name3Controller" class="col-md-4">
+                <div id="login3">
+                    <h2>What's your Name ?</h2>
+                    <form class="form_name" ng-submit="sendName();">
+                        <input class="input_name" type="text" ng-model="newName" placeholder="Votre nom">
+                    </form>
+                    <h4 id="erreur3"><li ng-repeat="erreur in listError3">{{erreur}}</li></h4>
+                </div>
+                <div id="chat3" class="row">
+                    <div class="head col-md-12">
+                        <h2 id="name_t3" class="name"></h2>
+                        <div id="wall3" class=" col-md-12 wall">
+                            <div class=" col-md-6 global">
+                                <h3>Chat Global</h3>
+                                <ul>
+                                    <li ng-repeat="chat in listMsg track by $index">{{chat}}</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 private">
+                                <h3>Chat Privé</h3>
+                                <ul>
+                                    <li ng-repeat="private in listPrivate3 track by $index">{{private}}</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-12 msg">
+                                <form ng-submit="sendMessage();">
+                                    <input class="input_msg" type="text" ng-model="newMessage" placeholder="Votre message">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
